@@ -1,0 +1,33 @@
+name: sloctolyzer
+channels:
+  - conda-forge
+  - defaults
+  - willyd
+dependencies:
+  - python=3.11
+  - pip
+  - numpy=1.26.4
+  - pandas=1.5.3
+  - matplotlib=3.10.0
+  - scikit-image=0.25.1
+  - scikit-learn=1.6.1
+  - scipy=1.17.1
+  - openpyxl=3.1.5
+  - pillow=12.1.1
+  - tifffile=2026.3.3
+  - h5py=3.15.1
+  - pyyaml=6.0.3
+  - tqdm=4.67.1
+  - pip:
+      - opencv-python==4.11.0.86
+      - eyepy==0.12.2
+      - oct-converter==0.6.2
+      - imagecodecs==2023.9.18
+      - simpleitk==2.4.1
+      - torch==2.6.0
+      - torchvision==0.21.0
+      - segmentation-models-pytorch==0.3.3
+      - efficientnet-pytorch==0.7.1
+      - pretrainedmodels==0.7.4
+      - timm==0.9.2
+      - nptyping==2.5.0

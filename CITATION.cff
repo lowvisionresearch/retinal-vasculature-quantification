@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite this research software and the SLOctolyzer paper when using this pipeline."
+type: software
+title: "Retinal Vasculature Quantification"
+authors:
+  - family-names: Soans
+    given-names: "Rijul S."
+  - family-names: Chung
+    given-names: "Susana T. L."
+repository-code: "https://github.com/lowvisionresearch/retinal-vasculature-quantification"

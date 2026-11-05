@@ -1,0 +1,16 @@
+# MAKE SURE NAMES AND INPUTS ARE SEPARATED WITH ": " [colon-spacebar]
+
+image_directory: E:\Rijul\Git UCB\SLOctolyzer\analyze\demo
+
+output_directory: E:\Rijul\Git UCB\SLOctolyzer\analyze\output
+
+-------------------------------------------------------------------------------------------------------------
+
+# For typical use case, leave settings below untouched (all set to 1)
+# For debugging any unexpected errors, set robust_run to 0. 
+# Otherwise, 1 will skip over any files which throw up unexpected error.
+robust_run: 1
+
+# Option to save out segmentation masks and superimposed segmentations onto SLO
+# per individual
+save_individual_segmentations: 1

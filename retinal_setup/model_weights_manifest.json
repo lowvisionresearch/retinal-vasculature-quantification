@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "repository": "lowvisionresearch/retinal-vasculature-quantification",
+  "release_tag": "model-weights-v1.0.0",
+  "models": [
+    {
+      "name": "Artery/vein/optic-disc segmentation",
+      "filename": "avosegmenter_weights.pth",
+      "sha256": "af434736f3178cc960501c8c4f165dafaeee8c2736355d5e2c0f4fb32d19c1e4"
+    },
+    {
+      "name": "Fovea detection",
+      "filename": "fovsegmenter_weights.pth",
+      "sha256": "c0700e2acc7a1c92eeee327127a4a8f6bccea7b7760173d7fd03009a973cefcc"
+    },
+    {
+      "name": "Binary vessel segmentation",
+      "filename": "slosegmenter_weights.pth",
+      "sha256": "f3b43ba5c17f1253c7970efff843ab0dc6c9ad2e30aacc55e0009b41ce8e4610"
+    }
+  ]
+}

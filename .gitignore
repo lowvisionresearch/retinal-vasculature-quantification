@@ -1,0 +1,91 @@
+# Python / caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+.env
+.env.*
+*.egg-info/
+build/
+dist/
+
+# MATLAB / IDE
+*.asv
+*.autosave
+*.m~
+*.mexw64
+slprj/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Never commit runtime participant metadata, even unknown new filenames.
+/metadata/**
+!/metadata/.gitkeep
+
+# Generated results and accepted segmentations
+/results/**
+!/results/.gitkeep
+/segmented-images/**
+!/segmented-images/.gitkeep
+!/segmented-images/Segmented Images/
+/segmented-images/Segmented Images/**
+!/segmented-images/Segmented Images/.gitkeep
+
+# Working files produced by SLOctolyzer
+/models/SLOctolyzer/analyze/demo/**
+!/models/SLOctolyzer/analyze/demo/.gitkeep
+/models/SLOctolyzer/analyze/output/**
+!/models/SLOctolyzer/analyze/output/.gitkeep
+
+# Only approved source images and XMLs for these two example participants.
+# AG_02_001 is flat; MY_02_001 may be preorganized. Never include logs,
+# generated outputs, unrelated participant data or other arbitrary files.
+/raw-oct-images/*
+!/raw-oct-images/AG_02_001/
+!/raw-oct-images/MY_02_001/
+/raw-oct-images/AG_02_001/*
+/raw-oct-images/MY_02_001/*
+!/raw-oct-images/AG_02_001/*.[tT][iI][fF]
+!/raw-oct-images/AG_02_001/*.[tT][iI][fF][fF]
+!/raw-oct-images/AG_02_001/*.[xX][mM][lL]
+!/raw-oct-images/MY_02_001/*.[tT][iI][fF]
+!/raw-oct-images/MY_02_001/*.[tT][iI][fF][fF]
+!/raw-oct-images/MY_02_001/*.[xX][mM][lL]
+
+# Weight files live in GitHub Releases and PyTorch's external cache
+*.pth
+*.pt
+
+# Existing researcher-specific working databases and generated listings
+/scripts/vascularDensityFeatures_automated_ALcorrected.mat
+repo_tree.txt
+*.log
+
+# MY_02_001 can be distributed as exactly twelve organized acquisitions.
+# Use explicit directory names: patterns with character classes may fail on
+# Windows clones where Git uses core.ignorecase=true.
+!/raw-oct-images/MY_02_001/MY_02_001_OD_H_01/
+!/raw-oct-images/MY_02_001/MY_02_001_OD_H_02/
+!/raw-oct-images/MY_02_001/MY_02_001_OD_H_03/
+!/raw-oct-images/MY_02_001/MY_02_001_OD_V_01/
+!/raw-oct-images/MY_02_001/MY_02_001_OD_V_02/
+!/raw-oct-images/MY_02_001/MY_02_001_OD_V_03/
+!/raw-oct-images/MY_02_001/MY_02_001_OS_H_01/
+!/raw-oct-images/MY_02_001/MY_02_001_OS_H_02/
+!/raw-oct-images/MY_02_001/MY_02_001_OS_H_03/
+!/raw-oct-images/MY_02_001/MY_02_001_OS_V_01/
+!/raw-oct-images/MY_02_001/MY_02_001_OS_V_02/
+!/raw-oct-images/MY_02_001/MY_02_001_OS_V_03/
+/raw-oct-images/MY_02_001/*/*
+!/raw-oct-images/MY_02_001/*/OCT.tif
+!/raw-oct-images/MY_02_001/*/*.[xX][mM][lL]
+!/raw-oct-images/MY_02_001/*/bscans/
+/raw-oct-images/MY_02_001/*/bscans/*
+!/raw-oct-images/MY_02_001/*/bscans/*.[tT][iI][fF]
+!/raw-oct-images/MY_02_001/*/bscans/*.[tT][iI][fF][fF]
