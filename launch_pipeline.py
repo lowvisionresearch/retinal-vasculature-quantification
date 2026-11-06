@@ -868,6 +868,13 @@ class PipelineLauncher(tk.Tk):
 
             self.log(f"  {line}")
 
+            if line.startswith("[VBP REVIEW REQUIRED]"):
+                self.progress_label.config(
+                    text="ACTION REQUIRED: Answer the VBP Review dialog (Alt+Tab if hidden)."
+                )
+            elif line.startswith("[VBP REVIEW CHOICE]"):
+                self.progress_label.config(text="Running Python vascular metrics...")
+
             # Update progress label if script prints case names.
             if (
                 "Processing" in line

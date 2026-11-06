@@ -472,20 +472,35 @@ def get_axial_length(axial_df: pd.DataFrame, participant_id: str, eye: str) -> f
     raise ValueError(f"Unknown eye label: {eye}")
 
 def ask_vbp_review_mode() -> bool:
-    """Ask whether user wants manual VBP review."""
-    root = tk.Tk()
-    root.withdraw()
-
-    review = messagebox.askyesno(
-        "VBP Review",
-        "Vascular bifurcation point (VBP) estimation can be noisy.\n\n"
-        "Do you want to review VBP detections case-by-case?\n\n"
-        "Yes = review VBP detections\n"
-        "No = compute automatically without review",
-        parent=root,
+    """Ask for VBP review, bringing the decision dialog to the foreground."""
+    print(
+        "[VBP REVIEW REQUIRED] Please choose Yes or No in the VBP Review dialog "
+        "to continue. Use Alt+Tab if the dialog is not visible.",
+        flush=True,
     )
 
-    root.destroy()
+    root = tk.Tk()
+    root.withdraw()
+    root.attributes("-topmost", True)
+    root.update()
+
+    try:
+        review = messagebox.askyesno(
+            "ACTION REQUIRED - VBP Review",
+            "Vascular bifurcation point (VBP) estimation can be noisy.\n\n"
+            "Do you want to review VBP detections case-by-case?\n\n"
+            "Yes = review VBP detections\n"
+            "No = compute automatically without review",
+            parent=root,
+        )
+    finally:
+        root.destroy()
+
+    print(
+        "[VBP REVIEW CHOICE] "
+        + ("Manual review selected." if review else "Automatic counting selected."),
+        flush=True,
+    )
     return review
 
 
