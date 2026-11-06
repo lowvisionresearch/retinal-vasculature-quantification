@@ -95,8 +95,6 @@ conda activate sloctolyzer
 
 The environment checks for three pretrained model checkpoints, downloads any missing files from this project's versioned GitHub Release, and verifies their SHA-256 checksums. Later activations reuse correctly verified files.
 
-**Release prerequisite:** The `model-weights-v1.0.0` GitHub Release must be published with the matching checkpoint filenames and checksums before first-time automatic model downloads will work.
-
 ### 3. Open the main application
 
 From the same folder in Anaconda Prompt:
